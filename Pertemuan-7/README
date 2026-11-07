@@ -1,0 +1,65 @@
+Pengelolaan Jadwal Perkuliahan BAAK
+
+Deskripsi Project
+
+Project ini merupakan aplikasi sederhana berbasis Laravel untuk menampilkan informasi jadwal perkuliahan. Aplikasi ini dibuat sebagai tugas praktikum untuk mempelajari penggunaan Route, Controller, dan Blade pada Laravel.
+
+Data jadwal yang digunakan masih berupa data contoh (array) yang disimpan di dalam Controller, sehingga belum menggunakan database.
+
+Fitur
+
+1. Daftar Jadwal
+   Menampilkan seluruh jadwal perkuliahan beserta mata kuliah, dosen, ruang, waktu, dan status jadwal.
+
+2. Detail Jadwal
+   Menampilkan informasi lengkap jadwal berdasarkan ID yang dipilih.
+
+3. Jadwal Dosen
+   Menampilkan daftar mata kuliah yang diajar oleh dosen tertentu.
+
+4. Informasi Status
+   Menampilkan status jadwal, seperti disetujui, diajukan, dan bentrok.
+
+Teknologi yang Digunakan
+
+- PHP
+- Laravel
+- HTML
+- CSS
+- Blade Template
+
+Struktur Halaman
+
+URL| Keterangan
+"/jadwal"| Menampilkan daftar jadwal
+"/jadwal/1"| Menampilkan detail jadwal berdasarkan ID
+"/dosen/hilman-lesmana-msf"| Menampilkan jadwal mengajar dosen
+
+Alur Program
+
+1. Pengguna membuka halaman melalui URL yang tersedia.
+2. Route menerima permintaan dan mengarahkannya ke method pada "JadwalController".
+3. Controller menyiapkan data jadwal yang diperlukan.
+4. Data dikirim ke halaman Blade.
+5. Blade menampilkan data menggunakan "@if" dan "@foreach".
+
+Cara Menjalankan Project
+
+1. Pastikan PHP dan Composer sudah terpasang.
+2. Buka folder project melalui terminal.
+3. Jalankan perintah berikut:
+
+composer install
+
+4. Salin file ".env.example" menjadi ".env" jika file ".env" belum tersedia.
+5. Jalankan:
+
+php artisan key:generate
+
+6. Jalankan aplikasi:
+
+php artisan serve
+
+7. Buka alamat berikut di browser:
+
+http://127.0.0.1:8000/jadwal
